@@ -26,7 +26,7 @@ function AddApplicationPage() {
   const [apiError, setApiError] = useState<string>("");
 
   const goBack = () => {
-    window.location.href = "/";
+    window.location.href = "/#/";
   };
 
   const validate = (): boolean => {
@@ -64,7 +64,7 @@ function AddApplicationPage() {
     setSubmitting(true);
     try {
       await createApplication(formData);
-      window.location.href = "/";
+      window.location.href = "/#/";
     } catch (err) {
       setApiError("Failed to create application. Please try again.");
     } finally {

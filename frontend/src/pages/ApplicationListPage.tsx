@@ -47,15 +47,15 @@ function ApplicationListPage() {
   };
 
   const goToAdd = () => {
-    window.location.href = "/add";
+    window.location.href = "/#/add";
   };
 
   const goToView = (id: string) => {
-    window.location.href = "/view/" + id;
+    window.location.href = "/#/view/" + id;
   };
 
   const goToEdit = (id: string) => {
-    window.location.href = "/edit/" + id;
+    window.location.href = "/#/edit/" + id;
   };
 
   return (

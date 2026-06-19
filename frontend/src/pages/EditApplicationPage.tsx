@@ -30,7 +30,7 @@ function EditApplicationPage() {
   const [apiError, setApiError] = useState<string>("");
 
   const goBack = () => {
-    window.location.href = "/";
+    window.location.href = "/#/";
   };
 
   useEffect(() => {
@@ -93,7 +93,7 @@ function EditApplicationPage() {
     setSubmitting(true);
     try {
       await updateApplication(id, formData);
-      window.location.href = "/";
+      window.location.href = "/#/";
     } catch (err) {
       setApiError("Failed to update application. Please try again.");
     } finally {

@@ -16,8 +16,13 @@ function ViewApplicationPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
 
-  const goBack = () => { window.location.href = "/"; };
-  const goToEdit = () => { if (id) window.location.href = "/edit/" + id; };
+  const goBack = () => {
+    window.location.href = "/#/";
+  };
+
+  const goToEdit = () => {
+    if (id) window.location.href = "/#/edit/" + id;
+  };
 
   useEffect(() => {
     const fetchApplication = async () => {
@@ -32,6 +37,7 @@ function ViewApplicationPage() {
         setLoading(false);
       }
     };
+
     fetchApplication();
   }, [id]);
 
@@ -68,7 +74,9 @@ function ViewApplicationPage() {
             <h1 className="text-2xl font-bold text-gray-800">{application.companyName}</h1>
             <p className="text-gray-600">{application.jobTitle}</p>
           </div>
-          <span className={`px-3 py-1 rounded-full text-sm font-medium ${STATUS_COLORS[application.status]}`}>
+          <span
+            className={`px-3 py-1 rounded-full text-sm font-medium ${STATUS_COLORS[application.status]}`}
+          >
             {application.status}
           </span>
         </div>
