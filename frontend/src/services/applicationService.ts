@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { Application, ApplicationFormData } from "../types/application";
 
-const API_BASE_URL = "http://localhost:5000/applications";
+const API_BASE_URL = "https://mini-job-application-tracker-60yu.onrender.com/applications";
 
 export const getApplications = async (
   status?: string,
